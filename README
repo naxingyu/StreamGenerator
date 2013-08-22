@@ -8,6 +8,15 @@
 The StreamGenerator is based on hts_engine API version 1.06. It was developed
 only for research purpose. The maintainer is from Beijing Institute of Technology:
  Xingyu Na             asr.naxingyu@gmail.com
+ 
+It functions similar to the hts_engine_API. The difference is that
+this is a single feature generator, which means you can generate mcep,
+lf0, bndap, hnr, ema, etc. separately for further processing, such as
+input them to a vocoder to synthesize waveform. To align different features,
+duration model is necessary. You can use the defined duration in label files.
+Currently, only phoneme level force duration is supported by option "-vp".
+The input model should be created using HTS-2.2.
+
 
 ===============================================================================
       The HMM-Based Speech Synthesis Engine "hts_engine API" version 1.06
